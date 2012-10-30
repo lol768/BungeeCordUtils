@@ -27,6 +27,7 @@ public class Main extends JavaPlugin implements Listener {
     @Override
 	public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args) 
 	{
+    	//TODO: Tell user if args not specified -- ATM false is returned which shows usage
     	if (cmd.getName().equalsIgnoreCase("bcsendall") && sender.hasPermission("bc.sendall") && args.length == 1)
     	{
     		for (Player p : Bukkit.getOnlinePlayers())
@@ -34,6 +35,7 @@ public class Main extends JavaPlugin implements Listener {
     			String s = args[0];
     			p.sendPluginMessage(this, "RubberBand", s.getBytes());
     		}
+    		return true;
     	}
     	
     	if (cmd.getName().equalsIgnoreCase("bcsend") && sender.hasPermission("bc.send") && args.length == 2)
@@ -43,6 +45,7 @@ public class Main extends JavaPlugin implements Listener {
     		{
     			String sa = args[1];
     			p.sendPluginMessage(this, "RubberBand", sa.getBytes());
+    			return true;
     		}
     		else
     		{
@@ -50,10 +53,10 @@ public class Main extends JavaPlugin implements Listener {
     		}
     		
     	}
-		return true;
+		return false;
     	
 	}
-    //event.getPlayer().sendPluginMessage(this, "RubberBand", sign.getLine(1).getBytes());
+    
 }
 
 
