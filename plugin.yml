@@ -1,0 +1,11 @@
+name: BungeeCordUtils
+version: 1
+author: lol768
+main: me.lol768.bc.Main
+commands:
+    bcsendall:
+        description: Send all players to somewhere
+        usage: /sendall <server>
+    bcsend:
+        description: Send all players to somewhere
+        usage: /sendall <server>
