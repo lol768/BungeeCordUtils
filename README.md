@@ -7,5 +7,6 @@ I'd like to make use of the official BungeeCord plugin system but I'm unsure if 
 
 Superseeded
 ===============
-This is old (but still functional). Grab this new version:
+This is old (but still functional). Grab this new version that's a BungeeCord plugin (not for CraftBukkit):
+
 https://github.com/lol768/BungeeCordToolkit
